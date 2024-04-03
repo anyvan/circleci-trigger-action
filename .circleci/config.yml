@@ -19,4 +19,6 @@ workflows:
   output:
     when: << pipeline.parameters.run_output_workflow >>
     jobs:
+      - compliance/verify:
+          context: anyvan
       - output
